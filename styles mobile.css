@@ -1,8 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
-    
-    
+    z-index: 0;
 }
 /*font-family: 'IBM Plex Sans', sans-serif;
 font-family: 'IBM Plex Mono', monospace;
@@ -10,13 +9,13 @@ font-family: 'IBM Plex Mono', monospace;
 .page-container{
     max-width: 320px;
 }
-
+/* Header con Navigation Bar*/
 header { 
     height: 44px;
     display:block;
     position:relative;
 }
-
+/* Navigation Bar */
 #page-nav label {
     display: inline-block;
     font-style: normal;
@@ -64,6 +63,20 @@ header {
     text-decoration: none;
 }
 
+#page-nav ul a:hover{
+    color: #00F3BB;
+    text-decoration-line: line-through;
+    font-weight: lighter;
+}
+
+#page-nav ul a:active{
+    color: rgba(6,10,36,0.56);
+    text-decoration-line: line-through;
+    font-weight: lighter;
+}
+
+/* Logo */
+
 #logo-bd{
     height: 24px;
     width: 24px;
@@ -76,9 +89,9 @@ header {
 }
 
 /* Main section */
+/*Intro*/
 
-
-.intro-section{
+.intro-container{
 display: inline-block;
 height: 244px;
 margin-top: 29px;
@@ -98,7 +111,7 @@ spam {
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.intro-section p{
+.intro-container p{
     display: block;
     margin: 16px 16px 36px 16px;
     font-family: 'IBM Plex Mono', monospace;
@@ -107,23 +120,89 @@ spam {
     letter-spacing: 0;  
     line-height: 22px;
 }
-.button{
+button{
     background-color: #00F3BB;
     border: none;
     padding: 13px 96px;
     margin: 0px 16px 36px;
-    text-decoration: none;
     display: inline-block;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 16px;
+    
+     
+}
+button:hover{
+    background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+    color: #FFFFFF;
+
+}
+    
+button a{
     color: #060A24;
     letter-spacing: 0;
     text-align: center;
     line-height: 22px;
     text-transform: uppercase;
     font-weight: bold;
-   
-}
- 
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    text-decoration: none;
 
+}
+
+
+/* Episodes */
+.episodes-container{
+height: 1203.5px;
+margin-top: 24px;
+position: absolute;
+z-index: 0;
+}
+
+ .episodes-container::before{
+    background-image:linear-gradient(225deg, #0000FF 0%, #0000A3);
+    content: "";
+    position: absolute;
+    top: 24px;
+    height: 100%;
+    width: 320px;
+    z-index: -1;
+    transform: skewY(-6deg) 
+ }
+
+
+.episodes-container h2{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 42px;
+    margin: 64px 147px 21px 16px ;
+    font-weight: lighter;
+} 
  
+.episodes-container .spotify-episodes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.spotify-episodes div{
+  max-width: 320px;
+  margin:0px 11px 6px 11px;
+}
+
+/*About us*/
+
+.cellimg-container{
+    display: block;    
+    position: relative;
+    width: 360px;
+    height: 519px;
+    transform: translate(-20px,1156px);
+}
+
+.cellimg-container .img_phone{
+    width: 360px;
+    height: 519px;
+}
