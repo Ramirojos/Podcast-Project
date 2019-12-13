@@ -110,6 +110,7 @@ header {
 
 .main-title{
     padding-left: 16px;
+    padding-right: 42px;
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 36px;
     color: #060A24;
@@ -184,9 +185,33 @@ button a{
     font-weight: lighter;
 } 
 
-.episodes-container .pod-episode{
-    padding: 0 9px;
+.episodes-container .pod-wrapper{
+    /*padding: 0 9px;*/
+    overflow: hidden;
+  padding-top: 985px;
+  padding-left:11px;
+  position: relative;
 }
+.episodes-container .pod-wrapper iframe{
+    border: 0;
+   height: 100%;
+   left: 9px;
+   position: absolute;
+   top: 0;
+   width: 94.375%;
+}
+
+.episodes-container .pod-wrapper .sintax-pod{
+    top:236px;
+}
+.episodes-container .pod-wrapper .rework-pod{
+    top:472px;
+}
+.episodes-container .pod-wrapper .ruby-pod{
+    top:708px;
+}
+
+
 
 /*About us*/
 
@@ -194,7 +219,7 @@ button a{
     display: flex;
     width: 360px;
     height: 519px;
-    margin: 38px 0 27px;
+    margin: 10px 0 27px;
 }
 
 .cellimg-container .img_phone{
@@ -313,8 +338,6 @@ button a{
     transform: skewy(-6deg);
     
 }
-
-
 
 .news-container h3{
     font-family: 'IBM Plex Sans', sans-serif;
@@ -446,5 +469,51 @@ footer .brand-icons i{
             padding: 0 612px 117px 200px;
             margin: 0
         }
+
+        .episodes-container{
+            width: 100%;
+        }
+
+        .episodes-container::before{
+            top: 449px;
+            height: 1042.6px;
+            width: 100%;
+            transform: skewY(-5deg); 
+        }
+
+        .episodes-container h2{
+        font-size: 48px;
+        padding: 186px 1031px 26px 200px;
+        }
+
+        .episodes-container .pod-wrapper{
+          padding-top: 540px;
+          padding-left:11px;
+          
+        } 
+
+        .episodes-container .pod-wrapper iframe{
+            height: 42.96%;
+           top: 0;
+           width: 40.55%;
+        }
+        
+        .episodes-container .pod-wrapper .jsparty-pod{
+            left:100px
+        }
+        .episodes-container .pod-wrapper .sintax-pod{
+            left: 756px;
+            top: 0;
+        }
+        .episodes-container .pod-wrapper .rework-pod{
+            left: 100px;
+            top: 305px;
+        }
+        .episodes-container .pod-wrapper .ruby-pod{
+            left: 756px;
+            top: 305px;
+        }
+
+
 
     }
