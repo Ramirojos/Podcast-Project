@@ -8,10 +8,8 @@
 font-family: 'IBM Plex Mono', monospace;
 */
 
-/* Header con Navigation Bar*/
-header { 
-    height: 44px;  
-}
+
+
 
 /* Navigation Bar */
 
@@ -21,11 +19,11 @@ header {
     justify-content: space-between;
     align-content: space-around;
     align-items: center;
-    height: 44px;
+    margin-top: 10px;
 }
 
 .page-nav .hamb-icon {
-    padding-right: 19px;
+    margin-right: 19px;
 }
 
 .page-nav .x-icon{
@@ -47,7 +45,7 @@ header {
 
 .page-nav ul li {
     display: block;
-    padding: 8px 16px 12px;
+    margin: 16px 16px 24px;
 }
 
 .page-nav input:checked ~ ul {
@@ -56,8 +54,6 @@ header {
     width: 100%;
     position: absolute;
     top: 42px;
-    padding-top: 8px;
-    padding-bottom: 12px;
 }
 
 .page-nav ul a{
@@ -101,6 +97,7 @@ header {
 }
 
 /* Main section */
+
 /*Intro*/
 
 .intro-container{
@@ -109,7 +106,7 @@ header {
 }
 
 .main-title{
-    padding-left: 16px;
+    margin: 29px 42px 16px 16px;    
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 36px;
     color: #060A24;
@@ -117,19 +114,25 @@ header {
     line-height: 42px;
     font-weight: lighter;
 }
-
-spam {
+.main-title .dot{
+    text-decoration: none;
+}
+.main-title .line-world {
     text-decoration-line: line-through;
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.intro-container p{
-    margin: 16px 16px 36px 16px;
+.intro-container p {
+    margin: 0 16px 36px;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 14px;
     color: #060A24;
     letter-spacing: 0;  
     line-height: 22px;
+}
+
+.intro-container .intro-desktop{
+    display: none;
 }
 
 button{
@@ -169,7 +172,7 @@ button a{
     content: "";
     position: absolute;
     height: 1203.5px;
-    width: 320px;
+    width: 100%;
     z-index: -1;
     transform: skewY(-6deg); 
 }
@@ -180,28 +183,44 @@ button a{
     color: #FFFFFF;
     letter-spacing: 0;
     line-height: 42px;
-    padding: 64px 0 21px 7px;
+    margin: 64px 0 21px 16px;
     font-weight: lighter;
 } 
 
-.episodes-container .pod-episode{
-    padding: 0 9px;
+.episodes-container .pod-wrapper{
+    /*padding: 0 9px;*/
+    overflow: hidden;
+  padding-top: 985px;
+  padding-left:11px;
+  position: relative;
+}
+.episodes-container .pod-wrapper iframe{
+    border: 0;
+   height: 100%;
+   left: 9px;
+   position: absolute;
+   top: 0;
+   width: 94.375%;
 }
 
-/*About us*/
-
-.cellimg-container{
-    display: flex;
-    width: 360px;
-    height: 519px;
-    margin: 38px 0 27px;
+.episodes-container .pod-wrapper .sintax-pod{
+    top:236px;
+}
+.episodes-container .pod-wrapper .rework-pod{
+    top:472px;
+}
+.episodes-container .pod-wrapper .ruby-pod{
+    top:708px;
 }
 
-.cellimg-container .img_phone{
+/* Cell Image */
+
+.img_phone{
     width: 360px;
     height: 519px;
 } 
 
+/*About us*/
 .aboutus-container{
     display: flex;
     flex-direction: column;
@@ -217,6 +236,7 @@ button a{
     letter-spacing: 0;
     line-height: 42px;
     font-weight: lighter;
+    margin-bottom: 8px;
 }
 
 .aboutus-container p{
@@ -268,53 +288,59 @@ button a{
     margin: 0 16px 24px;
 }
 
+.topics-container div{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .topics-container p{
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 24px;
     color: #060A24;
     letter-spacing: 0;
     text-align: center;
-    font-weight: lighter;
+    font-weight: bolder;
     margin: 13px 16px 0;
 }
 
-.trabajoremoto{
-    margin-top: 37px;
+.remoto-wrapper{
+    margin-bottom: 37px;
 }
 
-.recompensa-programacion{
-    margin-top: 49px;
+.recompensa-wrapper{
+    margin-bottom: 52px;
 }
 
-.bases-codigo{
-    margin-top: 65px;
+.basescodigo-wrapper{
+    margin-bottom: 52px;
 }
 
-.seguridad-informatica{
-    margin-top: 65px;
+.basescodigo-wrapper{
+    margin-bottom: 42px;
 }
 
 /* Ultimas novedades */
-
-.news-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-}
 
 .news-container::before{
     background-image:linear-gradient(225deg, #0000FF 0%, #0000A3);
     content: "";
     position: absolute;
+    top: 17px;
     height:380px;
-    width: 320px;
+    width: 100%;
     z-index: -2;
-    transform: skewy(-6deg);
-    
+    transform: skewy(-6deg); 
+    overflow: hidden;  
 }
 
-
+.news-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  
+}
 
 .news-container h3{
     font-family: 'IBM Plex Sans', sans-serif;
@@ -322,6 +348,7 @@ button a{
     color: #FFFFFF;
     letter-spacing: 0;
     text-align: center;
+    font-weight: lighter;
     line-height: 42px;
     margin: 64px 16px 36px;
 }
@@ -333,22 +360,25 @@ button a{
     margin: 0 16px 67px;
 }
 
+
 /* Footer*/
 
 footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 121px;
-}
+    position: relative;
 
+    
+    
+}
+   
 footer::before{
     background-color: #ffffff;
     content: "";
     position: absolute;
-    height: 110px;
-    width: 320px;
+    height: 121px;
+    width: 100%;
     z-index: -1;
 
 }
@@ -359,28 +389,24 @@ footer .copyright{
     color: #060A24;
     letter-spacing: 0;
     line-height: 22px;
-    padding-top: 24px;
+    margin: 24px 46.5px 16px;
 }
 
 footer .brand-icons{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin: 15px 46px 31px;
+
 }
 
-footer .brand-icons i{
-    margin: 16px 19px 31px;
-}
+
 
 
 @media only screen and (min-width: 1440px){
         *{
             max-width: 100%;
-        }
-        
-        header { 
-            height: 80px;  
-        }
+        }    
 
     /* Navigation Bar*/
 
@@ -420,10 +446,12 @@ footer .brand-icons i{
             margin: 22px 100px;
         }
 
+        /* Intro section*/
+
         .intro-container{
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: flex-start;
             flex-wrap: wrap;
             align-content: center;
         }
@@ -431,20 +459,229 @@ footer .brand-icons i{
         .main-title{
             
             font-size: 64px;
-            color: #060A24;
             letter-spacing: 0;
-            padding: 120px 500px 0 200px;
-            margin:0;
+            margin: 120px 500px 25px 200px;
+            padding:0;
+        }
+        .main-title .dot{
+            color: #0000EC;
+        }
+        
+        .intro-container p {
+            margin: 0 612px 56px 200px;
+            font-size: 16px;
+        }         
+        
+        .intro-container .intro-desktop{
+            display: block;
         }
 
-        .main-title br{
+        .intro-container .intro-mobile{
             display: none;
         }
 
-        .intro-container p{
-            font-size: 16px;
-            padding: 0 612px 117px 200px;
-            margin: 0
+        button{
+            background-color: #00F3BB;
+            border: none;
+            padding: 16px 59px;
+            margin: 0px 1014px 5px 200px;
         }
 
-    }
+        button a{
+            line-height: 24px;
+            font-size: 18px;
+            
+        }
+ 
+
+        /*Episodes section */
+
+        .episodes-container{
+            width: 100%;
+        }
+
+        .episodes-container::before{
+            top: 500px;
+            height: 890.76px;
+            transform: skewY(-5.1deg); 
+        }
+
+        .episodes-container h2{
+        font-size: 48px;
+        margin: 186px 1031px 26px 200px;
+        padding: 0;
+        }
+
+        .episodes-container .pod-wrapper{
+          padding-top: 540px;
+          padding-left:11px;
+          
+        } 
+
+        .episodes-container .pod-wrapper iframe{
+            height: 42.96%;
+           top: 0;
+           width: 40.55%;
+        }
+        
+        .episodes-container .pod-wrapper .jsparty-pod{
+            left:100px
+        }
+        .episodes-container .pod-wrapper .sintax-pod{
+            left: 756px;
+            top: 0;
+        }
+        .episodes-container .pod-wrapper .rework-pod{
+            left: 100px;
+            top: 305px;
+        }
+        .episodes-container .pod-wrapper .ruby-pod{
+            left: 756px;
+            top: 305px;
+        }
+        
+        /* Phone image*/
+
+        .img_phone{
+            position: absolute;
+            width: 457.6px;
+            height: 660px;
+            transform: translateX(10px);
+            transform: translate(200px, 64px);
+        } 
+        
+        /* About us Section*/
+
+        .aboutus-container{
+            margin: 253px 256px 254px 720px;
+        }
+        
+        .aboutus-container h2{
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+        
+        .aboutus-container p{
+            font-size: 16px;
+            line-height: 24px
+        }
+
+        /* Interview Section */
+
+        .interviews-container{
+            flex-direction: row;
+            align-items: flex-start;
+            margin-bottom: 64px;
+        }
+        
+        .interviews-container h2{
+            width: 100%;
+            font-size: 48px;
+            margin: 0 759px 36px 200px;
+       }
+
+       .interviews-container img{
+           width: 33.33%;
+       }
+
+       /* Topics Section */
+
+       .topics-container{
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 200px;
+        }
+    
+        .topics-container h2{
+        width: 100%;
+        font-size: 48px;
+        margin-bottom: 56px;
+        }
+    
+        .topics-container div{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        
+        }
+    
+        .topics-container .remoto-wrapper{
+            margin-right: 20px;
+            margin-left: 20px;            
+        }
+
+        .topics-container .recompensa-wrapper, .basescodigo-wrapper, .seguridad-wrapper{
+           margin: 0 20px;        
+        }
+
+        /* Ultimas novedades */
+
+        .news-container::before{
+           
+            top: 51px;
+            height: 500px;
+            width: 100%;
+            transform: skewy(-4deg);
+            
+        }
+        
+        .news-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;          
+        }
+
+                
+        .news-container h3{
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 48px;
+            color:#ffffff;
+            margin: 213px 274px 0;
+            width: 100%;
+        }
+        
+        .news-container button{
+            background-color: #00F3BB;
+            border: none;
+            padding: 16px 59px;
+            margin: 36px 547.5px 151px;
+        }
+
+        /* footer*/
+        
+        
+        footer{
+            flex-direction: row;
+            justify-content: space-between;            
+        }
+        
+        footer::before{
+            top: 10px;
+            height: 95px;
+            width: 100%;
+            z-index: -1;
+        
+        }
+
+        footer .copyright{
+            font-size: 16px;
+            line-height: 28px;
+            margin: 36px 0 31px 100px;
+        }
+        
+               
+        footer .brand-icons{
+            margin: 31px 100px 36px 0;
+        }
+
+        footer .brand-icons i {
+            margin: 0 18px;
+            height: 28px;
+            width: 18px;
+        }
+
+    
+
+}
