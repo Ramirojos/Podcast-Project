@@ -90,7 +90,6 @@ font-family: 'IBM Plex Mono', monospace;
     height: 24px;
     width: 24px;
     margin-left: 16px;
-
 }
 
 /* Main section */
@@ -132,7 +131,7 @@ font-family: 'IBM Plex Mono', monospace;
     width: 100%;
 }
 
-.intro-container .intro-desktop{
+.intro-container .desktop{
     display: none;
 }
 
@@ -150,7 +149,6 @@ font-family: 'IBM Plex Mono', monospace;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 16px;
     text-decoration: none;
-    
 }
 
 .knowmore-button:hover{
@@ -189,7 +187,7 @@ font-family: 'IBM Plex Mono', monospace;
 
 .episodes-container .pod-wrapper{
     overflow: hidden;
-    padding-top: 985px;
+    padding-top: 1005px;
     padding-left:11px;
     position: relative;
     width: 100%;
@@ -205,15 +203,15 @@ font-family: 'IBM Plex Mono', monospace;
 }
 
 .episodes-container .pod-wrapper .sintax-pod{
-    top:236px;
+    top:242px;
 }
 
 .episodes-container .pod-wrapper .rework-pod{
-    top:472px;
+    top:484px;
 }
 
 .episodes-container .pod-wrapper .ruby-pod{
-    top:708px;
+    top:726px;
 }
 
 /* Cell Image */
@@ -253,7 +251,7 @@ font-family: 'IBM Plex Mono', monospace;
 
 .interviews-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -295,7 +293,7 @@ font-family: 'IBM Plex Mono', monospace;
 
 .topics-wrapper{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 37px;
@@ -309,8 +307,12 @@ font-family: 'IBM Plex Mono', monospace;
 }
 
 .topics-container .remoto{
-    margin-bottom: 36px;
-} 
+    margin-bottom: 49px;
+}
+
+.topics-container .repensando .bases{
+    margin-bottom: 65px;
+}
 
 .topics-container .seguridad{
     margin-bottom: 0px;
@@ -343,10 +345,10 @@ font-family: 'IBM Plex Mono', monospace;
 .news-container::before{
     position: absolute;
     content: "";
-    -webkit-clip-path: polygon(0% 13%, 100% 0%, 100% 100%, 0% 100%);
-    clip-path: polygon(0% 13%, 100% 0%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
     width: 100%;
-    height: 341px;
+    height: 125%;
     bottom: 0;
     background-image:linear-gradient(225deg, #0000FF 0%, #0000A3);
     z-index: -1; 
@@ -485,11 +487,11 @@ footer .brand-icons{
             font-size: 16px;
         }         
         
-        .intro-container .intro-desktop{
+        .intro-container .desktop{
             display: block;
         }
 
-        .intro-container .intro-mobile{
+        .intro-container .mobile{
             display: none;
         }
 
@@ -609,6 +611,7 @@ footer .brand-icons{
         }
     
         .topics-wrapper{
+            flex-direction:row;
            justify-content: space-around;
            margin-top: 69px;
         }
